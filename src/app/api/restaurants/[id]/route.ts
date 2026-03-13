@@ -16,8 +16,9 @@ export async function GET(
   request: Request,
   { params }: { params: { id: string } }
 ) {
-  const prisma = getPrisma();
+  let prisma;
   try {
+    prisma = getPrisma();
     const restaurantId = params.id;
 
     if (!restaurantId) {
@@ -51,6 +52,8 @@ export async function GET(
       { status: 500 }
     );
   } finally {
-    await prisma.$disconnect();
+    if (prisma) {
+      await prisma.$disconnect();
+    }
   }
 }

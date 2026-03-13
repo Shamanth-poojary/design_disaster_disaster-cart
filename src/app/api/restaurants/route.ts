@@ -13,8 +13,9 @@ function getPrisma() {
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  const prisma = getPrisma();
+  let prisma;
   try {
+    prisma = getPrisma();
     const restaurants = await prisma.restaurant.findMany({
       include: {
         menuItems: true,
@@ -32,6 +33,8 @@ export async function GET() {
       { status: 500 }
     );
   } finally {
-    await prisma.$disconnect();
+    if (prisma) {
+      await prisma.$disconnect();
+    }
   }
 }

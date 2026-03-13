@@ -15,10 +15,9 @@ function getPrisma() {
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const prisma = getPrisma();
-  
   let restaurants: any[] = [];
   try {
+    const prisma = getPrisma();
     restaurants = await prisma.restaurant.findMany({
       orderBy: {
         rating: "desc"
