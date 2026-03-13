@@ -43,7 +43,7 @@ export const restaurants: Restaurant[] = [
         name: "Crispy Fries",
         description: "Golden, crispy fries perfectly seasoned with sea salt.",
         price: 129,
-        imageURL: "https://images.unsplash.com/photo-1576107232684-1279f3908594?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        imageURL: "https://plus.unsplash.com/premium_photo-1672774750509-bc9ff226f3e8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         isVegetarian: true,
         category: "Sides"
       },
@@ -110,7 +110,7 @@ export const restaurants: Restaurant[] = [
         name: "Margherita Pizza",
         description: "Classic pizza with San Marzano tomatoes, fresh mozzarella, and basil.",
         price: 399,
-        imageURL: "https://images.unsplash.com/photo-1573033621183-500b0f49ba62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        imageURL: "https://images.unsplash.com/photo-1665765374373-b3776bdd9dd6?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         isVegetarian: true,
         category: "Pizzas"
       },
@@ -128,7 +128,7 @@ export const restaurants: Restaurant[] = [
         name: "Garlic Bread",
         description: "Toasted baguette slices with garlic butter and herbs.",
         price: 149,
-        imageURL: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        imageURL: "https://images.unsplash.com/photo-1573140401552-3fab0b24306f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         isVegetarian: true,
         category: "Sides"
       }
@@ -166,7 +166,7 @@ export const restaurants: Restaurant[] = [
         name: "Green Detox Smoothie",
         description: "Spinach, green apple, cucumber, ginger, and lemon juice.",
         price: 199,
-        imageURL: "https://images.unsplash.com/photo-1610970881699-44a5587ce574?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        imageURL: "https://plus.unsplash.com/premium_photo-1675011652880-9e2289532ecd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         isVegetarian: true,
         category: "Drinks"
       }
@@ -195,7 +195,7 @@ export const restaurants: Restaurant[] = [
         name: "Veggie Burrito",
         description: "Large flour tortilla filled with black beans, rice, grilled peppers, and guacamole.",
         price: 279,
-        imageURL: "https://images.unsplash.com/photo-1626804475297-41609ea005eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+        imageURL: "https://plus.unsplash.com/premium_photo-1679287668420-80c27ea4fb31?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         isVegetarian: true,
         category: "Burritos"
       },

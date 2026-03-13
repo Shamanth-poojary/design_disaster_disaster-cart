@@ -40,7 +40,7 @@ async function run() {
         imageURL: "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         items: [
           { name: "Classic Cheeseburger", description: "Juicy beef patty with melted cheddar, lettuce, tomato, and our secret sauce.", price: 299, imageURL: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: false, category: "Mains" },
-          { name: "Crispy Fries", description: "Golden, crispy fries perfectly seasoned with sea salt.", price: 129, imageURL: "https://images.unsplash.com/photo-1576107232684-1279f3908594?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Sides" },
+          { name: "Crispy Fries", description: "Golden, crispy fries perfectly seasoned with sea salt.", price: 129, imageURL: "https://plus.unsplash.com/premium_photo-1672774750509-bc9ff226f3e8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isVegetarian: true, category: "Sides" },
           { name: "Onion Rings", description: "Thick-cut onion rings battered and fried to golden perfection.", price: 149, imageURL: "https://images.unsplash.com/photo-1639024471283-03518883512d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Sides" }
         ]
       },
@@ -65,9 +65,9 @@ async function run() {
         priceRange: "₹₹",
         imageURL: "https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         items: [
-          { name: "Margherita Pizza", description: "Classic pizza with San Marzano tomatoes, fresh mozzarella, and basil.", price: 399, imageURL: "https://images.unsplash.com/photo-1573033621183-500b0f49ba62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Pizzas" },
+          { name: "Margherita Pizza", description: "Classic pizza with San Marzano tomatoes, fresh mozzarella, and basil.", price: 399, imageURL: "https://images.unsplash.com/photo-1665765374373-b3776bdd9dd6?q=80&w=1364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isVegetarian: true, category: "Pizzas" },
           { name: "Pepperoni Pizza", description: "Tomato sauce, mozzarella, and generous amounts of premium pepperoni.", price: 449, imageURL: "https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: false, category: "Pizzas" },
-          { name: "Garlic Bread", description: "Toasted baguette slices with garlic butter and herbs.", price: 149, imageURL: "https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Sides" }
+          { name: "Garlic Bread", description: "Toasted baguette slices with garlic butter and herbs.", price: 149, imageURL: "https://images.unsplash.com/photo-1573140401552-3fab0b24306f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isVegetarian: true, category: "Sides" }
         ]
       },
       {
@@ -80,7 +80,7 @@ async function run() {
         items: [
           { name: "Quinoa Power Bowl", description: "Organic quinoa, roasted sweet potatoes, kale, avocado, and tahini dressing.", price: 349, imageURL: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Bowls" },
           { name: "Acai Berry Bowl", description: "Blended acai topped with granola, fresh berries, banana, and coconut flakes.", price: 299, imageURL: "https://images.unsplash.com/photo-1590301157890-4810ed352733?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Desserts" },
-          { name: "Green Detox Smoothie", description: "Spinach, green apple, cucumber, ginger, and lemon juice.", price: 199, imageURL: "https://images.unsplash.com/photo-1610970881699-44a5587ce574?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Drinks" }
+          { name: "Green Detox Smoothie", description: "Spinach, green apple, cucumber, ginger, and lemon juice.", price: 199, imageURL: "https://plus.unsplash.com/premium_photo-1675011652880-9e2289532ecd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isVegetarian: true, category: "Drinks" }
         ]
       },
       {
@@ -92,7 +92,7 @@ async function run() {
         imageURL: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
         items: [
           { name: "Al Pastor Tacos", description: "Three soft corn tortillas with marinated pork, pineapple, onion, and cilantro.", price: 249, imageURL: "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: false, category: "Tacos" },
-          { name: "Veggie Burrito", description: "Large flour tortilla filled with black beans, rice, grilled peppers, and guacamole.", price: 279, imageURL: "https://images.unsplash.com/photo-1626804475297-41609ea005eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Burritos" },
+          { name: "Veggie Burrito", description: "Large flour tortilla filled with black beans, rice, grilled peppers, and guacamole.", price: 279, imageURL: "https://plus.unsplash.com/premium_photo-1679287668420-80c27ea4fb31?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", isVegetarian: true, category: "Burritos" },
           { name: "Nachos Supreme", description: "Crispy tortilla chips loaded with melted cheese, jalapeños, pico de gallo, and sour cream.", price: 199, imageURL: "https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", isVegetarian: true, category: "Sides" }
         ]
       },
