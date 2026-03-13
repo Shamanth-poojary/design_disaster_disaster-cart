@@ -1,0 +1,80 @@
+﻿
+> flashkart@1.0.0 build
+> next build
+
+  Γû▓ Next.js 14.2.5
+  - Environments: .env
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+node.exe :  Γ¿» ESLint must 
+be installed in order to 
+run during builds: npm 
+install --save-dev eslint
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: ( Γ¿»   
+  ESLint mus...save-dev e   
+ slint:String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+Failed to compile.
+
+./src/app/search/page.tsx:22
+0:20
+Type error: Cannot find 
+name 'Search'.
+
+[0m [90m 218 |[39m       
+        
+[33m<[39m[33mdiv[39m cla
+ssName[33m=[39m[32m"bg-wh
+ite rounded-2xl p-12 
+text-center shadow-sm 
+border border-gray-100"[39m
+[33m>[39m[0m
+[0m [90m 219 |[39m       
+          
+[33m<[39m[33mdiv[39m cla
+ssName[33m=[39m[32m"text-
+gray-400 mb-4 flex justify-c
+enter"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90
+m 220 |[39m                
+   
+[33m<[39m[33mSearch[39m 
+className[33m=[39m[32m"w-
+16 h-16 opacity-30"[39m 
+[33m/[39m[33m>[39m[0m
+[0m [90m     |[39m       
+             
+[31m[1m^[22m[39m[0m
+[0m [90m 221 |[39m       
+          [33m<[39m[33m/
+[39m[33mdiv[39m[33m>[39m
+[0m
+[0m [90m 222 |[39m       
+          
+[33m<[39m[33mh3[39m clas
+sName[33m=[39m[32m"text-x
+l font-bold text-brand-dark 
+mb-2"[39m[33m>[39m[33mNo
+[39m results found[33m<[3
+9m[33m/[39m[33mh3[39m[3
+3m>[39m[0m
+[0m [90m 223 |[39m       
+          
+[33m<[39m[33mp[39m class
+Name[33m=[39m[32m"text-gr
+ay-500 max-w-md 
+mx-auto"[39m[33m>[39m[0m

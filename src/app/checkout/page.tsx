@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 import { useCart } from "@/context/CartContext";
 
 export default function CheckoutPage() {
-  const { cartItems, cartTotal, totalItems, isMounted } = useCart();
+  const { cartItems, cartTotal, totalItems, isMounted, clearCart } = useCart();
   const router = useRouter();
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -17,14 +17,18 @@ export default function CheckoutPage() {
 
   const handlePlaceOrder = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would send a POST request with the order details to an API route.
-    // For now, we'll mock a successful order placement UI.
     setIsSuccess(true);
+    
+    // Clear the cart
+    clearCart();
+
+    // Set a mock order with a 30-minute ETA in sessionStorage
+    const eta = new Date(Date.now() + 30 * 60000).toISOString();
+    sessionStorage.setItem("crave_active_order", JSON.stringify({ isOrdered: true, eta }));
+    window.dispatchEvent(new Event("crave_order_placed"));
     
     // Redirect after 3 seconds
     setTimeout(() => {
-      // Typically we'd want to clear the cart here as well
-      // But we'll leave it for now so the user can see their total
       router.push("/");
     }, 4000);
   };

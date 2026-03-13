@@ -11,6 +11,7 @@ interface CartContextType {
   cartItems: CartItem[];
   addToCart: (item: MenuItem) => void;
   removeFromCart: (itemId: string) => void;
+  clearCart: () => void;
   cartTotal: number;
   totalItems: number;
   isMounted: boolean;
@@ -25,7 +26,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   // Load from localStorage on initial mount
   useEffect(() => {
     setIsMounted(true);
-    const savedCart = localStorage.getItem("crave_cart");
+    const savedCart = localStorage.getItem("crave_delivery_v2_cart");
     if (savedCart) {
       try {
         setCartItems(JSON.parse(savedCart));
@@ -38,7 +39,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   // Save to localStorage whenever cart changes
   useEffect(() => {
     if (isMounted) {
-      localStorage.setItem("crave_cart", JSON.stringify(cartItems));
+      localStorage.setItem("crave_delivery_v2_cart", JSON.stringify(cartItems));
     }
   }, [cartItems, isMounted]);
 
@@ -66,6 +67,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
+  const clearCart = () => setCartItems([]);
+
   const cartTotal = cartItems.reduce(
     (acc, current) => acc + current.price * current.quantity,
     0
@@ -74,7 +77,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const totalItems = cartItems.reduce((acc, current) => acc + current.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, cartTotal, totalItems, isMounted }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, clearCart, cartTotal, totalItems, isMounted }}>
       {children}
     </CartContext.Provider>
   );

@@ -1,9 +1,20 @@
 import Header from "@/components/Header";
 import SearchBar from "@/components/SearchBar";
 import RestaurantCard from "@/components/RestaurantCard";
-import { restaurants } from "@/data/inventory";
+import { PrismaClient } from "@prisma/client";
 
-export default function Home() {
+const prisma = new PrismaClient();
+
+// Optional: Keep revalidation if data changes somewhat often
+export const revalidate = 60; // revalidate every 60 seconds
+
+export default async function Home() {
+  const restaurants = await prisma.restaurant.findMany({
+    orderBy: {
+      rating: "desc"
+    }
+  });
+
   return (
     <>
       <Header />

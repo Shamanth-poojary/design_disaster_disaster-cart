@@ -4,13 +4,56 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Star, Clock, Info, Heart, ArrowLeft, Plus, Minus, ShoppingBag } from "lucide-react";
 import Link from "next/link";
-import { restaurants, MenuItem } from "@/data/inventory";
+import { MenuItem } from "@/data/inventory";
 import Header from "@/components/Header";
 import { useCart } from "@/context/CartContext";
+import { useEffect, useState } from "react";
+
+interface DbRestaurant {
+  id: string;
+  name: string;
+  cuisine: string;
+  rating: number;
+  deliveryTime: string;
+  priceRange: string;
+  imageURL: string;
+  menuItems: MenuItem[];
+}
 
 export default function RestaurantPage({ params }: { params: { id: string } }) {
-  const restaurant = restaurants.find((r) => r.id === params.id);
   const { cartItems, addToCart, removeFromCart, cartTotal } = useCart();
+  const [restaurant, setRestaurant] = useState<DbRestaurant | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchRestaurant() {
+      try {
+        const response = await fetch(`/api/restaurants/${params.id}`);
+        if (!response.ok) {
+          setRestaurant(null);
+        } else {
+          const data = await response.json();
+          setRestaurant(data);
+        }
+      } catch (error) {
+        console.error("Failed to fetch restaurant details:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    fetchRestaurant();
+  }, [params.id]);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Header />
+        <main className="flex-1 flex items-center justify-center">
+          <div className="text-xl text-brand-primary font-medium animate-pulse">Loading menu...</div>
+        </main>
+      </div>
+    );
+  }
 
   if (!restaurant) {
     notFound();
@@ -67,7 +110,7 @@ export default function RestaurantPage({ params }: { params: { id: string } }) {
           <div className="lg:col-span-2">
             <h2 className="text-2xl font-bold bg-white text-brand-dark mb-6 sticky top-16 py-4 z-10">Menu</h2>
             <div className="space-y-6">
-              {restaurant.menu.map((item) => (
+              {restaurant.menuItems.map((item) => (
                 <div key={item.id} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 flex gap-6 hover:shadow-md transition-shadow">
                   <div className="flex-1">
                     <div className="flex items-center mb-1">

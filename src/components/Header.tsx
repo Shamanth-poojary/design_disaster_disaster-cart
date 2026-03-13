@@ -15,15 +15,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center gap-2">
             <Link href="/" className="font-bold text-2xl text-brand-primary tracking-tight shrink-0">
-              Crave<span className="text-brand-dark">Delivery</span>
+              Crave<span className="text-brand-dark"> Delivery</span>
             </Link>
           </div>
           
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-brand-dark hover:text-brand-primary font-medium transition-colors">Home</Link>
-            <Link href="#" className="text-brand-dark hover:text-brand-primary font-medium transition-colors">Restaurants</Link>
-            <Link href="#" className="text-brand-dark hover:text-brand-primary font-medium transition-colors">Offers</Link>
+            <Link href="/search" className="text-brand-dark hover:text-brand-primary font-medium transition-colors">Restaurants</Link>
           </nav>
           
           <div className="flex items-center space-x-4 sm:space-x-6">
@@ -54,8 +53,7 @@ export default function Header() {
         <div className="md:hidden border-t border-gray-100 bg-white px-4 pt-2 pb-4 shadow-lg absolute w-full left-0">
           <nav className="flex flex-col space-y-4">
             <Link href="/" className="text-brand-dark hover:text-brand-primary font-medium text-lg px-2 py-1" onClick={() => setIsMenuOpen(false)}>Home</Link>
-            <Link href="#" className="text-brand-dark hover:text-brand-primary font-medium text-lg px-2 py-1" onClick={() => setIsMenuOpen(false)}>Restaurants</Link>
-            <Link href="#" className="text-brand-dark hover:text-brand-primary font-medium text-lg px-2 py-1" onClick={() => setIsMenuOpen(false)}>Offers</Link>
+            <Link href="/search" className="text-brand-dark hover:text-brand-primary font-medium text-lg px-2 py-1" onClick={() => setIsMenuOpen(false)}>Restaurants</Link>
             <div className="border-t border-gray-100 pt-4 mt-2">
               <button className="flex items-center gap-2 text-brand-dark hover:text-brand-primary font-medium w-full px-2 py-1 text-lg">
                 <User className="w-5 h-5" />
