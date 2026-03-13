@@ -1,9 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { CartProvider } from "@/context/CartContext";
 import "./globals.css";
 
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "FlashKart – 5 Minute Grocery",
-  description: "Groceries faster than logic.",
+  title: "Crave - Food Delivery",
+  description: "Fast, fresh, and reliable food delivery.",
 };
 
 export const viewport: Viewport = {
@@ -20,8 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased overflow-x-hidden min-h-screen">
-        {children}
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
+        <CartProvider>
+          {children}
+        </CartProvider>
       </body>
     </html>
   );

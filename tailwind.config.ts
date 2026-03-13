@@ -9,14 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        hostile: {
-          cream: "#FFFDD0",
-          yellow: "#FFFF99",
-          lime: "#00ff00",
-          pink: "#ff00ff",
-          cyan: "#00ffff",
+        brand: {
+          primary: "#FF4500", // A warm, appetizing orange-red
+          secondary: "#FFF8F0", // Soft cream background
+          dark: "#1A1A1A", // Dark slate for text
+          light: "#FFFFFF",
+          gray: "#F3F4F6", // Light gray for borders, inactive
+          success: "#10B981", // Green for success
         }
-      }
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
     },
   },
   plugins: [],
