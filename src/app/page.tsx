@@ -3,17 +3,30 @@ import SearchBar from "@/components/SearchBar";
 import RestaurantCard from "@/components/RestaurantCard";
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+let prismaInstance: PrismaClient;
 
-// Optional: Keep revalidation if data changes somewhat often
-export const revalidate = 60; // revalidate every 60 seconds
+function getPrisma() {
+  if (!prismaInstance) {
+    prismaInstance = new PrismaClient();
+  }
+  return prismaInstance;
+}
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const restaurants = await prisma.restaurant.findMany({
-    orderBy: {
-      rating: "desc"
-    }
-  });
+  const prisma = getPrisma();
+  
+  let restaurants: any[] = [];
+  try {
+    restaurants = await prisma.restaurant.findMany({
+      orderBy: {
+        rating: "desc"
+      }
+    });
+  } catch (error) {
+    console.error("Failed to fetch restaurants:", error);
+  }
 
   return (
     <>

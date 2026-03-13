@@ -1,11 +1,19 @@
 import { NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient();
+let prismaInstance: PrismaClient;
+
+function getPrisma() {
+  if (!prismaInstance) {
+    prismaInstance = new PrismaClient();
+  }
+  return prismaInstance;
+}
 
 export const dynamic = "force-dynamic";
 
 export async function GET() {
+  const prisma = getPrisma();
   try {
     const restaurants = await prisma.restaurant.findMany({
       include: {
