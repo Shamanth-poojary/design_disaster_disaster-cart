@@ -56,7 +56,22 @@ export default function RestaurantPage({ params }: { params: { id: string } }) {
   }
 
   if (!restaurant) {
-    notFound();
+    return (
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Header />
+        <main className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <div className="bg-white rounded-2xl p-12 border border-gray-100 shadow-sm max-w-2xl mx-auto">
+            <h1 className="text-3xl font-bold text-gray-800 mb-4">Restaurant Not Found</h1>
+            <p className="text-gray-500 mb-8">
+              We couldn't load the details for this restaurant. This might be because the link is invalid, or our database connection is currently unavailable.
+            </p>
+            <Link href="/" className="inline-block bg-brand-primary text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition-colors shadow-md">
+              Return Home
+            </Link>
+          </div>
+        </main>
+      </div>
+    );
   }
 
   return (

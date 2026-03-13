@@ -62,18 +62,27 @@ export default async function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-            {restaurants.map((restaurant) => (
-              <RestaurantCard
-                key={restaurant.id}
-                id={restaurant.id}
-                name={restaurant.name}
-                imageURL={restaurant.imageURL}
-                cuisine={restaurant.cuisine}
-                rating={restaurant.rating}
-                deliveryTime={restaurant.deliveryTime}
-                priceRange={restaurant.priceRange}
-              />
-            ))}
+            {restaurants && restaurants.length > 0 ? (
+              restaurants.map((restaurant) => (
+                <RestaurantCard
+                  key={restaurant.id}
+                  id={restaurant.id}
+                  name={restaurant.name}
+                  imageURL={restaurant.imageURL}
+                  cuisine={restaurant.cuisine}
+                  rating={restaurant.rating}
+                  deliveryTime={restaurant.deliveryTime}
+                  priceRange={restaurant.priceRange}
+                />
+              ))
+            ) : (
+              <div className="col-span-full py-12 text-center bg-white rounded-2xl border border-gray-100 shadow-sm">
+                <p className="text-xl font-bold text-gray-800 mb-2">No restaurants available right now</p>
+                <p className="text-gray-500">
+                  Please check back later or ensure your database connection is properly configured.
+                </p>
+              </div>
+            )}
           </div>
         </section>
       </main>

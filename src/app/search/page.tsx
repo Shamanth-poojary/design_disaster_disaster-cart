@@ -44,10 +44,14 @@ function SearchContent() {
         const response = await fetch('/api/restaurants');
         if (response.ok) {
           const data = await response.json();
-          setRestaurants(data);
+          // Ensure it's an array to prevent .filter crashes
+          setRestaurants(Array.isArray(data) ? data : []);
+        } else {
+          setRestaurants([]);
         }
       } catch (error) {
         console.error("Failed to fetch restaurants for search:", error);
+        setRestaurants([]);
       } finally {
         setIsLoading(false);
       }
